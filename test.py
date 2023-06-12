@@ -24,7 +24,7 @@ btn_browse = tk.Button(frame, text='Select Image to saliency',bg='grey', fg='#ff
 def selectPic():
     global img
     filename = filedialog.askopenfilename(initialdir="/images", title="Select Image",
-                           filetypes=(("png images","*.png"),("jpg images","*.jpg")))
+                           filetypes=(("jpg images","*.jpg"),("png images","*.png")))
     img = Image.open(filename)
     mr = MR.MR_saliency() # initialization
     sal = mr.saliency(filename)
